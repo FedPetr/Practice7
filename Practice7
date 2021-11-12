@@ -1,0 +1,40 @@
+1.
+def print_till_zero(n):
+    for i in range(n, 0, -1):
+        print(i)
+
+2.
+def is_palindrome(n):
+    n = list(n)
+    t = True
+    while not (len(n) == 1 or len(n) == 0):
+        if n[0] == n[-1]:
+            n.pop(0)
+            n.pop()
+            
+        else:
+            t = False
+            print(n)
+            break
+    if t:
+        print('Это палиндром')
+    else:
+        print('Это не палиндром')
+      
+  3.
+  def power(a, n):
+    if n % 2 == 1:
+        k = (a**(n-1)) * a
+    else:
+        k = (a**(n/2)) * (a**(n/2))
+    return k
+
+4.
+def max_in(n):
+    maks = 0
+    maxi = 0
+    for i in range(len(n)):
+        if n[i] > maks:
+            maks = n[i]
+            maxi = i
+    return maxi+1
